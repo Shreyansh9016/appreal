@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Realify App</title>
+</head>
+<body>
+    <button onclick="openRealifyApp()">Open Realify App</button>
+
+    <script>
+        function openRealifyApp() {
+            // Attempt to open the app using the custom URL scheme
+            window.location.href = "realify://open";
+
+            // Optional fallback for devices without the app
+            setTimeout(() => {
+                alert("Realify app is not installed on your device.");
+            }, 2000); // Wait for 2 seconds before showing the fallback
+        }
+    </script>
+</body>
+</html>
